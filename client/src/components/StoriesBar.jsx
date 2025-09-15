@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { dummyStoriesData } from "../assets/assets";
 import { Plus } from "lucide-react";
+import moment from "moment";
+import StoryModel from "./StoryModel";
 
 const StoriesBar = () => {
   const [stories, setStories] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+  const [viewStory, setViewStory] = useState(null);
 
   const fetchStories = async () => {
     setStories(dummyStoriesData);
@@ -14,7 +18,8 @@ const StoriesBar = () => {
   }, []);
   return (
     <div className="w-screen sm:w-[calc(100vw-240px)] lg:max-w-2xl no-scrollbar overflow-x-auto px-4">
-      <div className="flex gap-4 pb-5">
+      <div 
+     onClick={() => setShowModal(true)} className="flex gap-4 pb-5">
         {/* Add Story Card*/}
         <div className="rounded-lg shadow-sm min-w-30 max-w-30 max-h-40 aspect[3/4] cursor-pointer hover:shadow-lg transition-all duration-200 border-2 border-dashed border-indigo-300 bg-gradient-to-b from-indigo-50 to-white">
           <div className="h-full flex flex-col items-center justify-center p-4 ">
@@ -41,11 +46,33 @@ const StoriesBar = () => {
               {story.content}
             </p>
             <p className="text-white absolute bottom-1 right-2 z-10 text-xs">
-              {story.createdAt}
+              {moment(story.createdAt).fromNow()}
             </p>
+            {story.media_type !== "text" && (
+              <div className="absolute inset-0 z-10 rounded-lg overflow-hidden">
+                {story.media_type === "image" ? ( // ✅ fixed
+                  <img
+                    src={story.media_url}
+                    alt=""
+                    className="h-full w-full object-cover hover:scale-110 transition duration-500"
+                  />
+                ) : (
+                  <video
+                    src={story.media_url}
+                    className="h-full w-full object-cover hover:scale-110 transition duration-500"
+                    autoPlay
+                    loop
+                    muted
+                  />
+                )}
+              </div>
+            )}
           </div>
         ))}
       </div>
+
+      {/*  Add Story Modal*/}
+      {showModal && <StoryModel setShowModal={setShowModal} fetchStories={fetchStories}/>}
     </div>
   );
 };
