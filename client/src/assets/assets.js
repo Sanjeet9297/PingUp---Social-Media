@@ -200,40 +200,40 @@ export const dummyPostsData = [
 ];
 
 export const dummyRecentMessagesData = [
-    {
-        "_id": "68833af618623d2de81b5381",
-        "from_user_id": dummyUser2Data,
-        "to_user_id": dummyUserData,
-        "text": "I seen your profile",
-        "message_type": "text",
-        "media_url": "",
-        "seen": true,
-        "createdAt": "2025-09-15T08:06:14.436Z",
-        "updatedAt": "2025-09-15T08:47:47.768Z",
-    },
-    {
-        "_id": "6878cc3c17a54e4d3748012f",
-        "from_user_id": dummyUserData,
-        "to_user_id": dummyUserData,
-        "text": "This is a Samsung Tablet",
-        "message_type": "text",
-        "media_url": "",
-        "createdAt": "yT10:11:08.437Z",
-        "updatedAt": "2025-09-15T08:07:11.893Z",
-        "seen": true
-    },
-    {
-        "_id": "686fb66c7f0dcbff63b239e7",
-        "from_user_id": dummyUser3Data,
-        "to_user_id": dummyUserData,
-        "text": "how are you",
-        "message_type": "text",
-        "media_url": "",
-        "createdAt": "2025-07-10T12:47:40.510Z",
-        "updatedAt": "2025-07-10T12:47:40.510Z",
-        "seen": false
-    }
-]
+  {
+    _id: "68833af618623d2de81b5381",
+    from_user_id: dummyUser2Data,
+    to_user_id: dummyUserData,
+    text: "I seen your profile",
+    message_type: "text",
+    media_url: "",
+    seen: true,
+    createdAt: "2025-09-15T08:06:14.436Z",
+    updatedAt: "2025-09-15T08:47:47.768Z",
+  },
+  {
+    _id: "6878cc3c17a54e4d3748012f",
+    from_user_id: dummyUserData,
+    to_user_id: dummyUserData,
+    text: "This is a Samsung Tablet",
+    message_type: "text",
+    media_url: "",
+    createdAt: "2025-09-10T12:47:40.510Z",
+    updatedAt: "2025-09-15T08:07:11.893Z",
+    seen: true,
+  },
+  {
+    _id: "686fb66c7f0dcbff63b239e7",
+    from_user_id: dummyUser3Data,
+    to_user_id: dummyUserData,
+    text: "how are you",
+    message_type: "text",
+    media_url: "",
+    createdAt: "2025-09-14T12:47:40.510Z",
+    updatedAt: "2025-07-10T12:47:40.510Z",
+    seen: false,
+  },
+];
 
 export const dummyMessagesData = [
     {
