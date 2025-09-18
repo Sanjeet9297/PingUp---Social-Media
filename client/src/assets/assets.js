@@ -243,7 +243,7 @@ export const dummyMessagesData = [
         "text": "",
         "message_type": "image",
         "media_url": "https://images.pexels.com/photos/106341/pexels-photo-106341.jpeg",
-        "createdAt": "2025-09-15T10:10:58.524Z",
+        "createdAt": "2025-09-14T10:10:58.524Z",
         "updatedAt": "2025-09-15T10:43:50.346Z",
         "seen": true
     },
@@ -254,7 +254,7 @@ export const dummyMessagesData = [
         "text": "This is a Samsung Tablet",
         "message_type": "text",
         "media_url": "",
-        "createdAt": "2025-09-15T10:11:08.437Z",
+        "createdAt": "2025-09-14T10:11:08.437Z",
         "updatedAt": "2025-09-15T10:43:50.346Z",
         "seen": true
     },
@@ -276,7 +276,7 @@ export const dummyMessagesData = [
         "text": "you can purchase it from amazon",
         "message_type": "text",
         "media_url": "",
-        "createdAt": "2025-08-17T10:10:48.956Z",
+        "createdAt": "2025-09-15T10:10:48.956Z",
         "updatedAt": "2025-08-25T10:43:50.346Z",
         "seen": true
     },
