@@ -7,7 +7,6 @@ import {serve} from 'inngest/express'
 
 const app = express();
 
-await connectDB();
 
 app.use(express.json());
 app.use(cors());
