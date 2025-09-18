@@ -1,19 +1,18 @@
 import mongoose from "mongoose";
 
-const connectDB = async () => {
-  try {
-    mongoose.connection.on("connected", () => {
-      console.log("✅ Database connected");
-    });
+async function main() {
+  await mongoose.connect("mongodb://127.0.0.1:27017/pingup", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
+}
 
-    mongoose.connection.on("error", (err) => {
-      console.error("❌ DB connection error:", err.message);
-    });
+main()
+  .then(() => {
+    console.log("✅ Connection Successful");
+  })
+  .catch((err) => {
+    console.error("❌ Connection Failed:", err.message);
+  });
 
-    await mongoose.connect(`${process.env.MONGODB_URL}/pingup`);
-  } catch (error) {
-    console.error("❌ Connection failed:", error.message);
-  }
-};
-
-export default connectDB;
+export default mongoose;
