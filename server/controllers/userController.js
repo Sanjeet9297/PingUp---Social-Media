@@ -1,6 +1,6 @@
 // Get User Data using userId
 
-//import imagekit from "../configs/imageKit.js";
+import imagekit from "../configs/imageKit.js";
 import User from "../modals/User.js";
 import fs from "fs";
 
