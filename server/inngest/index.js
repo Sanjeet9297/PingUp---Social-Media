@@ -26,7 +26,7 @@ const syncUserCreation = inngest.createFunction(
       profile_picture: image_url,
       username,
     };
-    await user.create(userData);
+    await User.create(userData);
   }
 );
 
