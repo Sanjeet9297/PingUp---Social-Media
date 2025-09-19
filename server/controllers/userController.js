@@ -4,6 +4,7 @@ import imagekit from "../configs/imageKit.js";
 import User from "../modals/User.js";
 import fs from "fs";
 
+// HERE ERROR 
 export const getUserData = async (req, res) => {
   try {
     const { userId } = req.auth();
