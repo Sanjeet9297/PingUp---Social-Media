@@ -1,10 +1,10 @@
 // Get User Data using userId
 
-import imagekit from "../configs/imageKit.js";
+//import imagekit from "../configs/imageKit.js";
 import User from "../modals/User.js";
 import fs from "fs";
 
-// HERE ERROR 
+// HERE ERROR {After Fix you change}
 export const getUserData = async (req, res) => {
   try {
     const { userId } = req.auth();
